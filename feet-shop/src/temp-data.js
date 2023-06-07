@@ -7,6 +7,17 @@ import cosmic from './assets/cosmic.webp';
 import dunkHighRetro from './assets/dunkHighRetro.webp';
 import pegasus from './assets/pegasus.webp';
 
+
+export const cartProducts = [
+    {
+        id: '123',
+        name: 'airHuarache',
+        price: '$140',
+        image: airHuarache,
+    }
+]
+
+
 export const products = [{
     id: '123',
     name: 'airHuarache',

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h3 class="header">Product Page</h3>
+    <h3 class="header">Product Details Page</h3>
     <hr />
     <div class="card mb-3" style="max-width: 540px">
       <div class="row g-0">
@@ -36,3 +36,12 @@ export default {
   },
 };
 </script>
+
+<style>
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+</style>
