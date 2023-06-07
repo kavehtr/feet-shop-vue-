@@ -13,7 +13,7 @@
         <p class="card-text">
           {{ item.price }}
         </p>
-        <router-link :to="'/ProductPage/' + products.id">
+        <router-link :to="'/ProductPage/' + item.id">
           <button class="btn btn-warning">View Details</button>
         </router-link>
       </div>

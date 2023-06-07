@@ -1,4 +1,5 @@
 <template>
+  <div v-if="product">
   <div class="container">
     <h3 class="header">Product Details Page</h3>
     <hr />
@@ -21,18 +22,24 @@
       </div>
     </div>
   </div>
+</div>
+  <div v-else>
+  <NotFoundPage />
+  </div>
 </template>
 
 <script>
 import { products } from "../temp-data";
+import  NotFoundPage  from "./NotFoundPage.vue";
 export default {
   name: "ProductDetailPage",
   data() {
     return {
-      product: products.find(
-        (product) => product.id === this.$route.params.ProductId
-      ),
+      product: products.find(product => product.id === this.$route.params.ProductId),
     };
+  },
+  components: {
+    NotFoundPage
   },
 };
 </script>
