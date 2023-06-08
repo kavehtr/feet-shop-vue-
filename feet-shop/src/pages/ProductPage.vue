@@ -2,29 +2,18 @@
   <div class="container">
     <h3 class="header">Product Page</h3>
     <hr />
-    <div
-      class="card m-2"
-      style="width: 18rem; display: inline-block"
-      v-for="item in products"
-    >
-      <img :src="item.image" class="card-img-top" alt="..." />
-      <div class="card-body">
-        <h5 class="card-title">{{ item.name }}</h5>
-        <p class="card-text">
-          {{ item.price }}
-        </p>
-        <router-link :to="'/ProductPage/' + item.id">
-          <button class="btn btn-warning">View Details</button>
-        </router-link>
-      </div>
-    </div>
+   <productsList :products="products"/>
   </div>
 </template>
 
 <script>
 import { products } from "../temp-data";
+import productsList from "../components/productsList.vue";
 export default {
   name: "ProductPage",
+  components: {
+    productsList
+  },
   data() {
     return {
       products,
